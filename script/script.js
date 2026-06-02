@@ -1,3 +1,55 @@
+const filmes =[
+    {
+        titulo: "taxi drive",
+        Imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/hvJvOYRrF9xxvNzg2Jd9PYWu7c3.jpg",
+        descrição: "drive",
+    },
+      {
+        titulo: "diverti-damente",
+        Imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/4Kg34KTlnoHvjLzD7ji2jUSouvD.jpg",
+        descrição: "mente",
+    },
+      {
+        titulo: "psicopata americano",
+        Imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/rxT7rVM4oLODCzdkkMPWGPMTSt3.jpg",
+        descrição: "americano",
+    },
+     {
+        titulo: "luacas neto em: acapamento de ferias 2",
+        Imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/vYgZa09ICwAB2TkonMfXRT4Dj8E.jpg",
+        descrição: "acapamento",
+    },
+     {
+        titulo: "miudos e graudos",
+        Imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/dbU5QOnTCPo4BKZskarx1bBG9lG.jpg",
+        descrição: "grados",
+    },
+     {
+        titulo: "kung fu futebol clube",
+        Imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/rO1YoR49hs9QPla0vwCxrMLln33.jpg",
+        descrição: "kung",
+    },
+
+]
+
+const listaFilmes = document.getElementById("listaFilmes");
+function mostrarFilmes(lista) {
+    listaFilmes.innerHTML = ""
+    lista.forEach(filme => {
+        listaFilmes.innerHTML += `
+            <div class="col-md-4">
+                <div class="card card-filme h-100">
+                    <img src="${filme.imagem}" class="card-img-top">
+                    <div class="card-body">
+                        <h3>${filme.titulo}</h3>
+                        <p>${filme.descricao}</p>
+                        <button class="btn btn-dark" onclick="verDetalhes('${filme.titulo}')">Ver detalhes"</button>
+                    </div>
+                </div>
+            </div>    
+        `
+    })
+}
 const serie = [
     { titulo: "invencivel", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/qhb7RWU9ad9a5m3HbeRRXzjaMXf.jpg", descricao: "E uma serie animada que retrata a vida de um super heroi" , breve: "invencivel" },
     { titulo: "you", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/ivqi64qY0S3ZAimvjlqXLEH7D6W.jpg", descricao: "Um homem obsessivo e perigosamente charmoso vai ao extremo para entrar na vida das mulheres que o fascinam." ,breve: "voce" },
